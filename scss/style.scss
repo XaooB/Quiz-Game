@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background: #dedede;
+}
+
+#popup1 {
+  position: fixed;
+  display: none;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .85);
+  text-align: center;
+  .wrapper {
+    overflow: hidden;
+    height: 300px;
+    width: 100%;
+    position: relative;
+    top: 36%;
+    h2 {
+      color: greenyellow;
+      margin-bottom: 50px;
+      font-size: 1.8em;
+      font-weight: bold;
+    }
+    h1 {
+      color: greenyellow;
+      font-size: 3em;
+      text-align: center;
+      margin-bottom: 15px;
+      font-weight: lighter;
+    }
+    a {
+      background: transparent;
+      border: 2px solid greenyellow;
+      padding: 20px;
+      font-size: 1.5em;
+      color: greenyellow;
+      text-decoration: none;
+      &:hover {
+        transition: .7s;
+        background: rgba(173, 255, 47, .4);
+        color: white;
+      }
+    }
+  }
+}
+
+#container {
+  overflow: hidden;
+  padding-left: 5px;
+  padding-right: 5px;
+  max-width: 1300px;
+  margin: 0 auto;
+  .opis {
+    width: 60%;
+    text-align: center;
+    float: left;
+    h1 {
+      font-size: 2.4em;
+      height: 400px;
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+  .zdjecie {
+    width: 40%;
+    float: left;
+  }
+  .alfabet, .haslo {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 30px;
+    li {
+      display: inline-block;
+      width: 60px;
+      height: 60px;
+      text-transform: uppercase;
+      border: 1px solid #ddd;
+      background: #fefefe;
+      margin: 5px;
+      line-height: 60px;
+      cursor: pointer;
+      overflow: auto;
+    }
+    li.space {
+      background: none;
+      cursor: default;
+      height: 0;
+      display: block;
+    }
+    .exist {
+      transition: 1s;
+      background: greenyellow;
+    }
+    .notExist {
+      transition: 1s;
+      background: #cbcbcb;
+      color: #b2b2b2;
+    }
+    .fadeIn {
+      opacity: 1;
+      transition: .7s;
+    }
+  }
+  .alfabet {
+    position: relative;
+    z-index: 999;
+  }
+  .chances {
+    text-align: center;
+    margin-top: 30px;
+    h3 {
+      font-size: 2em;
+      color: red;
+    }
+    button {
+      margin-top: 20px;
+      margin-left: 0;
+      opacity: 0;
+      padding: 12px;
+      font-size: 2em;
+      color: #cbcbcb;
+      background: black;
+      border: 2px solid black;
+      border-radius: 50px;
+      cursor: pointer;
+    }
+  }
+  .animation {
+    transition: 1.5s ease-out;
+    transform: rotateX(1440deg);
+  }
+  .animation_bt {
+    transition: 1s ease-out;
+    transform: rotateY(360deg);
+  }
+}
